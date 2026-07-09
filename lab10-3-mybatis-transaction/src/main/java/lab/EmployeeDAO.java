@@ -12,8 +12,8 @@ public class EmployeeDAO extends EgovAbstractMapper {
     insert("employee.insertEmployee", vo);
   }
 
-  public int deleteEmployee(CustomerVO vo) {
-    return delete("employee.deleteEmployee", vo);
+  public int deleteAllEmployee(CustomerVO vo) {
+    return delete("employee.deleteAllEmployee", vo);
   }
 
   public int updateEmployee(CustomerVO vo) {

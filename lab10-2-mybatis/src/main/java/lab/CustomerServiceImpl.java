@@ -23,8 +23,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	// delete Emp
-	public void deleteCustomer(CustomerVO customerVO) throws Exception {
-		customerDAO.deleteCustomer(customerVO);
+	public void deleteAllCustomer(CustomerVO customerVO) throws Exception {
+		customerDAO.deleteAllCustomer(customerVO);
 	}
 
 	// list Emp

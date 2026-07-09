@@ -12,8 +12,8 @@ public class CustomerDAO extends EgovAbstractMapper {
     insert("customer.insertCustomer", vo);
   }
 
-  public int deleteCustomer(CustomerVO vo) {
-    return delete("customer.deleteCustomer", vo);
+  public int deleteAllCustomer(CustomerVO vo) {
+    return delete("customer.deleteAllCustomer", vo);
   }
 
   public List<CustomerVO> selectCustomerList(CustomerVO vo) {

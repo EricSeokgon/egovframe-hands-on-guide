@@ -13,7 +13,7 @@ public class CustomerApp {
 		CustomerService customer = (CustomerService) context.getBean("customerService");
 
 		CustomerVO vo = new CustomerVO();
-		customer.deleteCustomer(vo);
+		customer.deleteAllCustomer(vo);
 
 		vo.id = "1";
 		vo.name = "KIM";

@@ -21,9 +21,9 @@ public class CustomerServiceImpl implements CustomerService {
 		employeeDAO.insertEmployee(customerVO);
 	}
 
-	public void deleteCustomer(CustomerVO customerVO) throws Exception {
-		customerDAO.deleteCustomer(customerVO);
-		employeeDAO.deleteEmployee(customerVO);
+	public void resetLabData(CustomerVO customerVO) throws Exception {
+		customerDAO.deleteAllCustomer(customerVO);
+		employeeDAO.deleteAllEmployee(customerVO);
 	}
 
 	@Transactional

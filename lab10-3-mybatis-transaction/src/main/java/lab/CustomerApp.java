@@ -14,7 +14,7 @@ public class CustomerApp {
 		List<CustomerVO> resultList;
 		CustomerVO vo = new CustomerVO();
 		try {
-		customer.deleteCustomer(vo);
+		customer.resetLabData(vo);
 		
 		vo.id = "1";
 		vo.name = "KIM";

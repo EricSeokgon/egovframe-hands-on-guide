@@ -6,7 +6,7 @@ public interface CustomerService {
 
 	public void insertCustomer(CustomerVO customerVO) throws Exception;
 
-	public void deleteCustomer(CustomerVO customerVO) throws Exception;
+	public void resetLabData(CustomerVO customerVO) throws Exception;
 
 	public void updateCustomer(CustomerVO customerVO) throws Exception;
 

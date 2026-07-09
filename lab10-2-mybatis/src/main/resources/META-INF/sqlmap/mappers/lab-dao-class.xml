@@ -16,7 +16,7 @@
 			]]>
 	</insert>
 
-	<delete id="deleteCustomer" parameterType="customerVO">
+	<delete id="deleteAllCustomer" parameterType="customerVO">
 			<![CDATA[
 				delete from customer
 			]]>

@@ -14,9 +14,9 @@
 			<field property="phone" depends="required">
 				<arg0 key="label.phone" />
 			</field>
-			<!--  field property="email" depends="email">
-        		<arg0 key="label.email" />
-			</field-->
+			<field property="email" depends="email">
+				<arg0 key="label.email" />
+			</field>
 		</form>
 	</formset>
 

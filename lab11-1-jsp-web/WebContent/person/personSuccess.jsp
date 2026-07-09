@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
   <html>
 
   <head>
@@ -7,16 +8,13 @@
   </head>
 
   <body>
-    <% request.setCharacterEncoding("UTF-8"); String name=request.getParameter("name"); String
-      company=request.getParameter("company"); String phone=request.getParameter("phone"); String
-      email=request.getParameter("email"); %>
-      <div>NAME: <%=name%>
+      <div>NAME: <c:out value="${param.name}" />
       </div>
-      <div>COMPANY: <%=company%>
+      <div>COMPANY: <c:out value="${param.company}" />
       </div>
-      <div>PHONE: <%=phone%>
+      <div>PHONE: <c:out value="${param.phone}" />
       </div>
-      <div>EMAIL: <%=email%>
+      <div>EMAIL: <c:out value="${param.email}" />
       </div>
   </body>
 

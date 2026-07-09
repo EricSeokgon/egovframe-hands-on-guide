@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class JDBCExample {
 
@@ -23,10 +22,10 @@ public class JDBCExample {
 				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/com?useSSL=false", "com", "com01" );
 				System.out.println("connected");
 			
-				Statement stmt = conn.createStatement();
-				String sql2 = "delete from customer";
-				stmt.executeUpdate(sql2);
-				
+				try (PreparedStatement delete = conn.prepareStatement("delete from customer")) {
+					delete.executeUpdate();
+				}
+
 				int[] id = { 1, 2, 3 };
 				String[] name = { "KIM", "PARK", "LEE" };
 				String[] addr = { "Seoul", "Incheon", "Daejeon" };
@@ -43,7 +42,8 @@ public class JDBCExample {
 				}
 				
 
-			ResultSet rset = stmt.executeQuery("SELECT id, name, addr FROM customer");
+			PreparedStatement select = conn.prepareStatement("SELECT id, name, addr FROM customer");
+			ResultSet rset = select.executeQuery();
 			
 			while(rset.next()) {
 				System.out.println("id: " + rset.getInt(1));
